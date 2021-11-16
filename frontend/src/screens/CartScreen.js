@@ -7,7 +7,6 @@ import {
   Grid,
   List,
   ListItem,
-  Divider,
   Box,
   Container,
   MenuItem,
@@ -67,7 +66,11 @@ const CartScreen = ({ match, location, history }) => {
                       <Grid container spacing={3}>
                         <Grid item md={2}>
                           <CardMedia
-                            sx={{ display: "flex", maxHeight: "96px" }}
+                            sx={{
+                              display: "flex",
+                              maxHeight: 114,
+                              maxWidth: 100,
+                            }}
                             component="img"
                             image={item.image}
                           />
@@ -83,7 +86,7 @@ const CartScreen = ({ match, location, history }) => {
                         <Grid item md={2}>
                           ${item.price}
                         </Grid>
-                        <Grid item md={2}>
+                        <Grid item md={3}>
                           <Box>
                             <FormControl
                               sx={{
@@ -157,9 +160,9 @@ const CartScreen = ({ match, location, history }) => {
                 <ListItem>
                   <Button
                     variant="contained"
+                    style={{ backgroundColor: "#343a40" }}
                     disabled={cartItems.length === 0}
                     onClick={checkoutHandler}
-                    style={{ backgroundColor: "#343a40" }}
                   >
                     Proceed to checkout
                   </Button>

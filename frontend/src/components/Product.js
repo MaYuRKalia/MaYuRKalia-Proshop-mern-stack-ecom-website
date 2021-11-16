@@ -11,9 +11,7 @@ import Rating from "@mui/material/Rating";
 import { useHistory } from "react-router-dom";
 
 const Product = ({ product }) => {
-
   let history = useHistory();
-  console.log(history, product.name);
 
   function navigateToProduct(id) {
     history.push(`/product/${id}`);
